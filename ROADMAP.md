@@ -7,7 +7,7 @@
 
 - [v] Инициализация репозитория: структура, Docs, README, parent POM
 - [v] Микросервис пользователей (`GET /api/users/{userId}`)
-- [ ] Микросервис заказов (`GET /api/orders/by-user/{user}`)
-- [ ] BFF-микросервис (`GET /api/site-bff/user/{userId}`)
+- [v] Микросервис заказов (`GET /api/orders/by-user/{user}`)
+- [w] BFF-микросервис (`GET /api/site-bff/user/{userId}`)
 - [ ] Интеграционное тестирование и финальная документация
 - [ ] Push в удалённый репозиторий
