@@ -79,3 +79,25 @@ curl http://localhost:8080/api/site-bff/user/1
 | order-service | 8082 |
 
 URL микросервисов для BFF настраиваются в `site-bff/src/main/resources/application.properties`.
+
+Готовые HTTP-запросы для IntelliJ IDEA — в файле [`java-micro-restful-bff/http-requests.http`](java-micro-restful-bff/http-requests.http).
+
+## Пример ответа BFF
+
+```json
+{
+  "userId": 1,
+  "fullName": "Иванов Иван Иванович",
+  "deliveryAddress": "г. Москва, ул. Ленина, д. 10",
+  "phone": "+7-900-111-22-33",
+  "email": "ivanov@example.com",
+  "orders": [
+    {
+      "orderId": 101,
+      "amount": 4599.00,
+      "currency": "RUB",
+      "items": ["Наушники", "Чехол для телефона"]
+    }
+  ]
+}
+```

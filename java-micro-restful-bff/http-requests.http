@@ -1,0 +1,16 @@
+### Проверка микросервисов через HTTP Client (IntelliJ IDEA)
+
+#### User Service — порт 8081
+GET http://localhost:8081/api/users/1
+
+#### Order Service — порт 8082
+GET http://localhost:8082/api/orders/by-user/1
+
+#### Site BFF — порт 8080
+GET http://localhost:8080/api/site-bff/user/1
+
+#### Пользователь без заказов (пустой список orders в BFF)
+GET http://localhost:8080/api/site-bff/user/999
+
+#### Несуществующий пользователь (ожидается 404)
+GET http://localhost:8080/api/site-bff/user/404
