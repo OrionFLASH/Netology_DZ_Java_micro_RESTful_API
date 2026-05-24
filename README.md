@@ -8,7 +8,8 @@
 |---------|------|
 | [`java-micro-restful-bff/`](java-micro-restful-bff/) | RESTful API и паттерн BFF (Backend-for-Frontend) |
 
-Исходные формулировки заданий — в каталоге [`Docs/`](Docs/).
+Исходные формулировки заданий — в каталоге [`Docs/`](Docs/).  
+Чеклист проверки соответствия заданию — [`Docs/verification-checklist.md`](Docs/verification-checklist.md).
 
 ## Структура проекта
 
@@ -81,6 +82,19 @@ curl http://localhost:8080/api/site-bff/user/1
 URL микросервисов для BFF настраиваются в `site-bff/src/main/resources/application.properties`.
 
 Готовые HTTP-запросы для IntelliJ IDEA — в файле [`java-micro-restful-bff/http-requests.http`](java-micro-restful-bff/http-requests.http).
+
+## Соответствие заданию
+
+| Компонент | Endpoint | Статус |
+|-----------|----------|--------|
+| user-service | `GET /api/users/{userId}` | ✅ |
+| order-service | `GET /api/orders/by-user/{user}` | ✅ |
+| site-bff | `GET /api/site-bff/user/{userId}` | ✅ |
+
+- Все три сервиса используют `@RestController` и `spring-boot-starter-web`.
+- Модели `User`, `Order` и агрегат `UserSiteProfile` содержат требуемые поля.
+- BFF обращается к user-service и order-service через HTTP-клиенты и **не хранит данные** локально.
+- Интеграционные проверки (сборка + HTTP-запросы) пройдены успешно — подробности в [`Docs/verification-checklist.md`](Docs/verification-checklist.md).
 
 ## Пример ответа BFF
 
