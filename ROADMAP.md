@@ -5,8 +5,8 @@
 
 ## Этапы
 
-- [w] Инициализация репозитория: структура, Docs, README, parent POM
-- [ ] Микросервис пользователей (`GET /api/users/{userId}`)
+- [v] Инициализация репозитория: структура, Docs, README, parent POM
+- [v] Микросервис пользователей (`GET /api/users/{userId}`)
 - [ ] Микросервис заказов (`GET /api/orders/by-user/{user}`)
 - [ ] BFF-микросервис (`GET /api/site-bff/user/{userId}`)
 - [ ] Интеграционное тестирование и финальная документация
